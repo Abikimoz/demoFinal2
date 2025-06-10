@@ -21,9 +21,9 @@ public class OrgController {
 
     private void addOrgCard(Org org) {
         try {
-            FXMLLoader loader = new FXMLLoader(MasterApp.class.getResource("org-card.fxml"));
-            HBox card = loader.load();
-            OrgCardController controller = loader.getController();
+            FXMLLoader fxmlLoader = new FXMLLoader(MasterApp.class.getResource("org-card.fxml"));
+            HBox card = fxmlLoader.load();
+            OrgCardController controller = fxmlLoader.getController();
             controller.setOrg(org);
             orgContainer.getChildren().add(card);
         } catch (Exception e) {
